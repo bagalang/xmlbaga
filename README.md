@@ -82,3 +82,7 @@ ROUNDTRIP=1 baga -I ../.. -I .. demo.baga file.xml  # re-emit via writer
 
 Tests: `tests/xml_test.baga` (35 checks — events, errors, entities,
 CDATA, writer goldens, round-trip).
+
+## License
+
+[MIT](LICENSE) — Copyright (c) 2026 Dim Gigov.
