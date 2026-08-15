@@ -1,5 +1,22 @@
 # xmlbaga
 
+
+This repository is the package. The compiler and `std` stay in the baga
+language monorepo. Check this tree out as `app-product/xmlbaga` there
+(git submodule) so path deps and `-I app-product` keep working.
+
+## Checkout
+
+Inside a baga language clone:
+
+```bash
+git submodule update --init --recursive
+# or, first time from a fresh baga tree without the submodule recorded:
+git clone git@github.com:bagalang/xmlbaga.git app-product/xmlbaga
+```
+
+`sandak.toml` keeps path deps so shared packages stay in baga.
+`officebaga` and `reportbaga` still depend on `../xmlbaga`. `tests/xml_test.baga` stays in baga.
 **Universal XML pull parser + writer** for Baga (apps-roadmap №11) —
 event streaming in the style of Rust's `quick-xml` / `xml-rs`, no DOM.
 Base package: application-specific XML formats (bank statements, invoices,
